@@ -210,8 +210,8 @@ class TemplateBuilder:
 
 def main():
     """Extract template from teacher's homework"""
-    # Load teacher's OCR result
-    with open('output/homework1_res.json', 'r', encoding='utf-8') as f:
+    # Load teacher's OCR result (hw_1 is now the answer key)
+    with open('output/hw_1_res.json', 'r', encoding='utf-8') as f:
         teacher_ocr = json.load(f)
     
     # Build template

@@ -326,8 +326,8 @@ class HomeworkGradingSystem:
         results = []
         ocr_dir = Path(ocr_results_dir)
         
-        for json_file in ocr_dir.glob("*_res.json"):
-            if "homework1" in json_file.name:  # Skip teacher's answer key
+        for json_file in ocr_dir.glob("hw_*_res.json"):
+            if "hw_1" in json_file.name:  # Skip teacher's answer key
                 continue
                 
             student_id = json_file.stem.replace("_res", "")

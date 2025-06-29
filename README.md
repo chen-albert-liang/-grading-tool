@@ -49,7 +49,7 @@ pip install -r requirements.txt
 python pp_grading_ocr_v5.py
 ```
 
-This will process all homework images and generate JSON files in the `output/` directory.
+This will process all homework images in the `hw/` directory and generate JSON files in the `output/` directory.
 
 ### 3. Run the Automated Grading System
 
@@ -58,23 +58,24 @@ python demo_grading_system.py
 ```
 
 This will:
-- Extract the answer key template from the teacher's homework
-- Grade all student homework assignments
+- Extract the answer key template from `hw_1.png` (teacher's answer key)
+- Grade `hw_2.png` and `hw_3.png` (student homework)
 - Generate comprehensive reports
 
 ## 📁 File Structure
 
 ```
 grading_tool/
-├── homework_img/                 # Input homework images
-│   ├── homework1.png            # Teacher's answer key
-│   ├── homework2.png            # Student 1
-│   ├── homework3.png            # Student 2
-│   └── ...
-├── output/                      # OCR results
-│   ├── homework1_res.json       # Teacher's OCR result
-│   ├── homework2_res.json       # Student 1's OCR result
-│   └── ...
+├── hw/                        # Input homework images
+│   ├── hw_1.png              # Teacher's answer key
+│   ├── hw_2.png              # Student 1 homework
+│   ├── hw_3.png              # Student 2 homework
+│   └── answer_key.png        # Additional answer key (if needed)
+├── output/                    # OCR results
+│   ├── hw_1_res.json         # Teacher's OCR result
+│   ├── hw_2_res.json         # Student 1's OCR result
+│   ├── hw_3_res.json         # Student 2's OCR result
+│   └── *_ocr_res_img.png     # Visualization images
 ├── automated_grading_system.py  # Main grading system
 ├── template_builder.py          # Template extraction
 ├── demo_grading_system.py       # Demo script

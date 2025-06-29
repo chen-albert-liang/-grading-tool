@@ -18,7 +18,7 @@ def demo_complete_workflow():
     # Step 1: Build template from teacher's answer key
     print("Step 1: Building template from teacher's answer key...")
     try:
-        with open('output/homework1_res.json', 'r', encoding='utf-8') as f:
+        with open('output/hw_1_res.json', 'r', encoding='utf-8') as f:
             teacher_ocr = json.load(f)
         
         builder = TemplateBuilder()
@@ -42,8 +42,8 @@ def demo_complete_workflow():
     
     # Step 3: Process student homework
     print("\nStep 3: Processing student homework...")
-    student_files = list(Path("output").glob("*_res.json"))
-    student_files = [f for f in student_files if "homework1" not in f.name]
+    student_files = list(Path("output").glob("hw_*_res.json"))
+    student_files = [f for f in student_files if "hw_1" not in f.name]  # Skip teacher's answer key
     
     print(f"Found {len(student_files)} student homework files:")
     for file in student_files:
@@ -165,8 +165,8 @@ def demo_single_student():
     """Demo grading a single student's homework"""
     print("\n=== SINGLE STUDENT DEMO ===")
     
-    # Load a single student's OCR result
-    student_file = "output/homework2_res.json"
+    # Load a single student's OCR result (hw_2 is a student homework)
+    student_file = "output/hw_2_res.json"
     if not Path(student_file).exists():
         print(f"Student file {student_file} not found")
         return
@@ -178,7 +178,7 @@ def demo_single_student():
     with open(student_file, 'r', encoding='utf-8') as f:
         ocr_result = json.load(f)
     
-    result = grader.grade_homework("homework2", ocr_result)
+    result = grader.grade_homework("hw_2", ocr_result)
     
     # Display detailed results
     print(f"\nStudent: {result.student_id}")
