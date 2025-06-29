@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "total_students": 0,
+    "average_score": 0.0,
+    "average_accuracy": 0.0,
+    "highest_score": 0.0,
+    "lowest_score": 0.0,
+    "max_score": 0.0
+  },
+  "student_results": []
+}

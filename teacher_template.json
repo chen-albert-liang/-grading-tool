@@ -1,0 +1,65 @@
+{
+  "4": {
+    "question_id": "4",
+    "question_text": "拓展练习 4",
+    "expected_answer": "31",
+    "answer_type": "numeric",
+    "points": 6.0,
+    "tolerance": 0.1,
+    "partial_credit": true
+  },
+  "5": {
+    "question_id": "5",
+    "question_text": "基础练习 5",
+    "expected_answer": "4",
+    "answer_type": "numeric",
+    "points": 2.0,
+    "tolerance": 0.1,
+    "partial_credit": true
+  },
+  "3": {
+    "question_id": "3",
+    "question_text": "提高练习 3",
+    "expected_answer": "1",
+    "answer_type": "numeric",
+    "points": 4.0,
+    "tolerance": 0.1,
+    "partial_credit": true
+  },
+  "2": {
+    "question_id": "2",
+    "question_text": "基础练习 2",
+    "expected_answer": "=",
+    "answer_type": "formula",
+    "points": 2.0,
+    "tolerance": 0.1,
+    "partial_credit": true
+  },
+  "1": {
+    "question_id": "1",
+    "question_text": "提高练习 1",
+    "expected_answer": "26",
+    "answer_type": "numeric",
+    "points": 4.0,
+    "tolerance": 0.1,
+    "partial_credit": true
+  },
+  "0": {
+    "question_id": "0",
+    "question_text": "提高练习 0",
+    "expected_answer": "600x=461",
+    "answer_type": "formula",
+    "points": 4.0,
+    "tolerance": 0.1,
+    "partial_credit": true
+  },
+  "7": {
+    "question_id": "7",
+    "question_text": "提高练习 7",
+    "expected_answer": "600",
+    "answer_type": "numeric",
+    "points": 4.0,
+    "tolerance": 0.1,
+    "partial_credit": true
+  }
+}
